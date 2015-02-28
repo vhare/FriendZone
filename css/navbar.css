@@ -1,0 +1,22 @@
+a.headers {
+  color:black;
+}
+
+.navbar {
+  position:absolute;
+  background:transparent;
+  top:0px;
+  z-index:1;
+  width:100%;
+  border-bottom:2px solid black;
+  opacity: 0.6;
+}
+
+
+.headers {
+  font-family:'Avenir', 'AvantGardeGothicITCW01D 731075', 'AvantGardeGothicITCW01Dm', 'Helvetica', 'sans-serif';
+  font-weight: bolder;
+  font-color: white;
+}
+
+
