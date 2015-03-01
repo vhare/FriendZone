@@ -34,3 +34,8 @@ p {
 	border: none;
 	padding-left: 20px;
 }
+
+.match-pic {
+	height: 50px;
+	width: 50px;
+}
