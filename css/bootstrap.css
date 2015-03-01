@@ -5,6 +5,13 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+.messagesImage {
+
+
+}
+
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -941,6 +948,7 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
+  width: 100% \9;
   height: auto;
 }
 .img-rounded {
@@ -949,6 +957,7 @@ img {
 .img-thumbnail {
   display: inline-block;
   max-width: 100%;
+  width: 100% \9;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
@@ -1312,6 +1321,7 @@ blockquote.pull-right {
   border-right: 5px solid #eee;
   border-left: 0;
 }
+
 .blockquote-reverse footer:before,
 blockquote.pull-right footer:before,
 .blockquote-reverse small:before,
@@ -1328,6 +1338,12 @@ blockquote.pull-right small:after,
 blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
+
+  blockquote:before,    
+  blockquote:after {    
+    content: "";    
+}
+
 address {
   margin-bottom: 20px;
   font-style: normal;
@@ -2249,11 +2265,14 @@ table th[class*="col-"] {
   min-height: .01%;
   overflow-x: auto;
 }
+
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
@@ -4858,6 +4877,9 @@ a.thumbnail.active {
 }
 .media:first-child {
   margin-top: 0;
+}
+.media-object {
+  display: block;
 }
 .media-right,
 .media > .pull-right {
