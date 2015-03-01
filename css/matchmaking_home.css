@@ -1,0 +1,16 @@
+.friend-row {
+	margin-top: 10px;
+}
+
+.friend-pic {
+	margin-right: auto;
+	margin-left: auto;
+	width: 120px;
+}
+
+.badge-notify {
+	background: red;
+	position: relative;
+	top: -90px;
+	left: 70px;
+}
