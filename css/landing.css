@@ -1,0 +1,52 @@
+.headers {
+  font-family:'Avenir', 'AvantGardeGothicITCW01D 731075', 'AvantGardeGothicITCW01Dm', 'Helvetica', 'sans-serif';
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.first {
+	padding:100px;
+}
+
+.imgHeaderContainer {
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 50px;
+	padding-bottom: 15px;
+	width: 200px;
+
+}
+
+.buttonsContainer {
+	padding-top: 20px;
+}
+
+.imgHeader {
+	width: 200px;
+}
+
+.landingButtonContainer {
+	margin-left:auto;
+	margin-right:auto;
+	width: 250px;	
+	padding-left: 45px;
+	padding-right: 45px;
+	padding-top: 20px;
+}
+
+.landingButton {
+	width:160px;
+	height:60px;
+	border-radius: 16px;
+	font-family: Avenir;
+	color: white;
+	font-size: 20px;
+	border-color: white;
+	background-color: #575757;
+}
+
+body {
+	background-color: black;
+}
