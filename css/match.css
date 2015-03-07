@@ -1,0 +1,41 @@
+td {
+	padding: 10px;
+	border: 1px solid gray;
+	font-family: Avenir;
+}
+
+html, body {
+ height: 100%;
+ padding:0;
+ margin: 0;
+}
+
+table {
+	height:100%;
+	
+}
+
+.iconImg {
+	width:50px;
+}
+
+.profile {
+	left:auto;
+	right:auto;
+	width:100px;
+	height:100px;
+}
+
+p {
+	text-align:center;
+}
+
+.noBorder {
+	border: none;
+	padding-left: 20px;
+}
+
+.match-pic {
+	height: 50px;
+	width: 50px;
+}

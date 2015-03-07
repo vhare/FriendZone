@@ -1,15 +1,30 @@
 a.headers {
   color:black;
+  text-align:center;
+}
+
+.navbar-header {
+  width: 40px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .navbar {
-  position:absolute;
+ 
   background:transparent;
   top:0px;
   z-index:1;
   width:100%;
-  border-bottom:2px solid black;
   opacity: 0.6;
+  border-bottom: 2px solid gray;
+}
+
+.navbar-inner {
+  padding-top: 5px;
+}
+
+.iconHome {
+  width:45px;
 }
 
 
@@ -19,4 +34,12 @@ a.headers {
   font-color: white;
 }
 
+.iconImage {
+  width:30px;
 
+}
+
+.selected {
+  border-style: dashed;
+  border-width: 2px;
+}
