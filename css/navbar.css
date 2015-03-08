@@ -42,4 +42,5 @@ a.headers {
 .selected {
   border-style: dashed;
   border-width: 2px;
+  opacity: 0.6;
 }
