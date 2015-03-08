@@ -44,18 +44,55 @@
 
     <div class="row">
       <div class="col-xs-4">
-        <img src="images/yes_button.png" class="icon center-block"></img>
-        <p class="iconText">Cancel Date</p>
+        <button class="btn btn-default" data-toggle="modal" data-target="#yesModal">
+          <img src="images/yes_button.png" class="icon center-block"></img>
+          <p class="iconText">Confirm Date</p>
+        </button>
       </div>
       <div class="col-xs-4">
-        <img src="images/no_button.png" class="icon center-block"></img>
-        <p class="iconText">Confirm Date</p>
+        <button class="btn btn-default" data-toggle="modal" data-target="#noModal">
+          <img src="images/no_button.png" class="icon center-block"></img>
+          <p class="iconText">Cancel Date</p>
+        </button>
       </div>
       <div class="col-xs-4">
         <img src="images/message.png" class="icon center-block"></img>
         <p class="iconText">Message</p>
       </div>
     </div>
+
+    <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">It's a Date!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Awesome!  You and Bobby are getting coffee at 6pm on Friday!</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-default" href="matchInbox.html">Ok!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="noModal" tabindex="-1" role="dialog" aria-labelledby="noModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Delete this Date?</h4>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" href="matchInbox.html">Delete</a>
+            <a class="btn btn-default" data-dismiss="modal">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
 
   </body>
 
