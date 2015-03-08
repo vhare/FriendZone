@@ -1,0 +1,26 @@
+.profile {
+	width:70px;
+	padding-top:10px;
+}
+
+.profileText {
+	padding:10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.smallText {
+	font-size:9pt;
+}
+
+.bottomBorder {
+	box-shadow: 0 5px 10px -5px gray;
+}
+
+.topShadow {
+	box-shadow: 0 3px 20px 0px gray
+}
+
+.topBorder{
+	border-top: 1px solid gray ;
+}

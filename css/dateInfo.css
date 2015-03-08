@@ -1,0 +1,36 @@
+.dateName {
+	text-align:center;
+	font-size: 16pt;
+	font-family:Avenir;
+	font-weight: bold;
+}
+
+.dateTime {
+	text-align:center;
+	font-size: 14pt;
+	font-family:Avenir;
+}
+
+.otherPhotos {
+	height:330px;
+}
+
+.row {
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
+.limiter {
+	width: 100%;
+	overflow: hidden;
+}
+
+.icon {
+	width:50px;
+	padding-top:5px;
+}
+
+.iconText {
+	font-size: 9pt;
+	text-align:center;
+}

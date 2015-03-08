@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+  <link href="css/dateInfo.css" rel="stylesheet">
+  <link href="css/dateProfile.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar">
+     <div class="container-fluid">
+      <div class="navbar-header pull-left" >
+          <a class="headers navbar-brand">FriendZone </a>
+      </div>
+      <div class="navbar-inner pull-right">
+          <img class="iconImage selected" src="images/blackFriends.png"> </img>  
+         <img class="iconImage" src="images/blackMatch.png"> </img>
+       </div>
+     </div>
+    </nav>
+
+    <div class="bottomBorder row">      
+    	<div class="col-xs-6 dateName">Bobby</div>
+    	<div class="col-xs-6 dateTime">Coffee at 6PM Friday</div>
+    </div>
+
+    <div class="panel-body" style="max-height: 330px; overflow-y: scroll;">
+    <div class="row total">
+       <div class="col-xs-6">
+        <p style="text-align:center; padding:10px;"> <b>Mountain View, CA</b> </br> Via Sam and Carly</p>
+      </div>
+      <div class="col-xs-2">
+        <img src="images/niceguy.jpeg" class="profile center-block img-circle"> </img>
+      </div>
+      <div class="col-xs-2">
+         <img src="images/niceGirl.jpeg" class="profile center-block img-circle"> </img>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="profileText">
+        <div class="topBorder">
+        <p><b>About me</b></p>
+        <p class="smallText">Hi! I am the most incredible man in the entire world. You should totally go on a date with me because I am special, and amazing, and I can swim around the world in 80 days. In addition to my amazing bod, I also have a humongous heart and I'm surprisingly brainy. So, are you ready to go on a date with me yet? ;)</p>
+        <p><b>Interests</b></p>
+        <p class="smallText">Beer/Wine tasting, rock climbing yoga</p>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="topShadow row">
+      <div class="col-xs-4">
+        <button class="btn btn-default" data-toggle="modal" data-target="#yesModal">
+          <img src="images/yes_button.png" class="icon center-block"></img>
+          <p class="iconText">Confirm Date</p>
+        </button>
+      </div>
+      <div class="col-xs-4">
+        <button class="btn btn-default" data-toggle="modal" data-target="#noModal">
+          <img src="images/no_button.png" class="icon center-block"></img>
+          <p class="iconText">Cancel Date</p>
+        </button>
+      </div>
+      <div class="col-xs-4">
+        <img src="images/message.png" class="icon center-block"></img>
+        <p class="iconText">Message</p>
+      </div>
+    </div>
+
+    <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">It's a Date!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Awesome!  You and Bobby are getting coffee at 6pm on Friday!</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-default" href="matchInbox.html">Ok!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="noModal" tabindex="-1" role="dialog" aria-labelledby="noModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Delete this Date?</h4>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-danger" href="matchInbox.html">Delete</a>
+            <a class="btn btn-default" data-dismiss="modal">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+
+ </html>
