@@ -36,6 +36,58 @@ p {
 }
 
 .match-pic {
-	height: 50px;
-	width: 50px;
+	height: 70px;
+	width: 70px;
+}
+
+.dateMesssageText {
+	text-align: center;
+	font-family: HelveticaNeue-Light;
+	font-size: 24px;
+	color: #000000;
+}
+
+.newMessageText {
+	/* New message!: */
+	text-align: center;
+	font-family: HelveticaNeue-LightItalic;
+	font-size: 18px;
+	color: #000000;
+	padding-left: 90px;
+	padding-top: 20px;
+}
+
+.newDateMessage {
+	text-align: center;
+	font-family: HelveticaNeue-Light;
+	font-size: 24px;
+	color: #000000;
+	/*background-color: #CBE6F4;*/
+}
+
+#friendzone-panel {
+	padding:0px;
+}
+
+.custom-cell-wrapper {
+	display:block;
+}
+.custom-cell {
+	padding: 7px 3px 0px 4px;
+	padding-left: 22px
+}
+.custom-cell-with-dot {
+	padding: 7px 3px 0px 4px;
+}
+.custom-cell-highlighted {
+	padding: 7px 3px 0px 4px;
+	background-color: #CBE6F4;
+	padding-left: 20px
+}
+
+.unreadMessage {
+	float: left;
+	padding-top: 30px;
+	padding-right: 5px;
+	width: 20px;
 }
