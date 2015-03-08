@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+  <link href="css/dateInfo.css" rel="stylesheet">
+  <link href="css/dateProfile.css" rel="stylesheet">
+  <link href="css/message.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header pull-left" >
+        <a class="headers navbar-brand">FriendZone</a>
+      </div>
+      <div class="navbar-inner pull-right">
+        <a href="matchmaking_home.html">
+          <img class="iconImage selected" src="images/blackFriends.png"></img>
+        </a>
+        <a href="matchInbox.html">
+          <img class="iconImage" src="images/blackMatch.png"></img>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bottomBorder row">      
+  	<div class="col-xs-6 dateName">Bobby</div>
+  	<div class="col-xs-6 dateTime">Coffee at 6PM Friday</div>
+  </div>
+
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class-"panel-title">Chat with Bobby</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="media-list">
+              <li class="media">
+                <div class="media-left">
+                  <img class="media-object img-circle profile-pic" src="images/Zac-Efron.jpg"></img>
+                </div>
+                <div class="media-body">
+                  <p>Hey Joanie! Looking forward to getting coffee with you! Do you have a particular place in mind?</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-body">
+                  <p>Hey there! I really like Philz coffee, want to meet at the one in Palo Alto?</p>
+                </div>
+                <div class="media-right">
+                  <img class="media-object img-circle profile-pic" src="images/niceGirl.jpeg"></img>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Send a message!">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="send-chat">Send</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/message.js"></script>
+
+  </body>
+
+ </html>
