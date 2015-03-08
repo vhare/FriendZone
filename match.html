@@ -7,23 +7,28 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/match.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/match.css" rel="stylesheet">
 
   </head>
   <body>
 
-      <nav class="navbar">
-     <div class="container-fluid">
-      <div class="navbar-header pull-left" >
-          <a class="headers navbar-brand">FriendZone </a>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header pull-left" >
+          <a class="headers navbar-brand">FriendZone</a>
+        </div>
+        <div class="navbar-inner pull-right">
+          <a href="matchmaking_home.html">
+            <img class="iconImage selected" src="images/blackFriends.png"></img>
+          </a>
+          <a href="matchInbox.html">
+            <img class="iconImage" src="images/blackMatch.png"></img>
+          </a>
+        </div>
       </div>
-      <div class="navbar-inner pull-right">
-          <img class="iconImage selected" src="images/blackFriends.png"> </img>  
-         <img class="iconImage" src="images/blackMatch.png"> </img>
-       </div>
-     </div>
     </nav>
+
     <div="tableContainer">
    	 <table>
     	<tr>
@@ -51,19 +56,41 @@
     	</tr>
     	<tr>
     		<td class="noBorder">
-    		<img class="iconImg" src="images/yes_button.png"></img>
-    		YES
-    		</div>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#yesModal">
+    		    <img class="iconImg" src="images/yes_button.png"></img>
+    		    YES
+          </button>
     		</td>
     		<td class="noBorder">
-    		<img class="iconImg"  src="images/no_button.png"> </img>
-    		NO
+          <a class="btn btn-default" href="match.html">
+        		<img class="iconImg"  src="images/no_button.png"> </img>
+        		NO
+          </a>
     		</td>
     	</tr>
   	  </table>
   	 </div>
 
 
+    <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Matching!</h4>
+          </div>
+          <div class="modal-body">
+            <p>It is almost a match! We are sending this request to Ashton's friend!</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-default" href="match.html">Continue Matching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
 
   </body>
  </html>
