@@ -17,12 +17,10 @@ a.headers {
 }
 
 .navbar {
- 
-  background:transparent;
+  background: white;
   top:0px;
   z-index:1;
   width:100%;
-  opacity: 0.6;
   border-bottom: 2px solid gray;
 }
 
@@ -43,9 +41,40 @@ a.headers {
 
 .iconImage {
   width:30px;
+  opacity: 0.45;
+  margin-top: 8px;
+}
+
+.icon-friends {
+  background-image: "images/blackFriends.png";
+  background-position: center center;
+}
+
+.icon-matches {
+  background-image: "images/blackMatch.png";
+  background-position: center center;
 
 }
 
 .selected {
-  opacity: 0.6;
+  opacity: 0.7;
 }
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.navbar .row {
+  padding: 0px;
+  border: none;
+  margin-right: 0px;
+}
+

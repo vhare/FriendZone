@@ -8,25 +8,30 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
-
-    <link href="css/date_inbox.css" rel="stylesheet">
+  <link href="css/date_inbox.css" rel="stylesheet">
 	
 
   </head>
   <body>
     <script src="js/JSON.js"></script>
 
-    <nav class="navbar" style="margin-bottom:0px;">
-     <div class="container-fluid">
-      <div class="navbar-header pull-left" >
-          <a class="headers navbar-brand" href="landing.html">FriendZone </a>
+    <div class="container navbar navbar-default navbar-fixed-top">
+    <div class="row">
+      <div class="col-xs-3 text-left">
+        <a href="matchmaking_home.html">
+          <img class="iconImage selected" src="images/blackFriends.png"></img>
+        </a>
       </div>
-      <div class="navbar-inner pull-right">
-          <a href="matchmaking_home.html" ><img class="iconImage" src="images/blackFriends.png"> </img></a> 
-         <a href="date_inbox.html"><img class="iconImage selected" src="images/blackMatch.png"> </img></a>
-       </div>
-     </div>
-    </nav>
+      <div class="col-xs-6 text-center">
+        <h3 class="navbar-brand">FriendZone</h3>
+      </div>
+      <div class="col-xs-3 text-right">
+        <a href="date_inbox.html">
+          <img class="iconImage" src="images/blackMatch.png"></img>
+        </a>
+      </div>
+    </div>
+  </div>
 
     <div class="row blueSelected">
       <a id="0" onclick="inboxClick(this.id)" href="dateProfile.html">

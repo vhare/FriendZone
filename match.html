@@ -10,45 +10,48 @@
   <link href="css/navbar.css" rel="stylesheet">
   <link href="css/match.css" rel="stylesheet">
 
-  </head>
-  <body>
+</head>
+<body style="padding-top: 50px;">
   <script src="js/JSON.js"></script>
   
-    <nav class="navbar">
-      <div class="container-fluid">
-        <div class="navbar-header pull-left" >
-          <a class="headers navbar-brand" href="landing.html">FriendZone</a>
-        </div>
-        <div class="navbar-inner pull-right">
-          <a href="matchmaking_home.html">
-            <img class="iconImage selected" src="images/blackFriends.png"></img>
-          </a>
-          <a href="date_inbox.html">
-            <img class="iconImage" src="images/blackMatch.png"></img>
-          </a>
-        </div>
+  <div class="container navbar navbar-default navbar-fixed-top">
+    <div class="row">
+      <div class="col-xs-3 text-left">
+        <a href="matchmaking_home.html">
+          <img class="iconImage selected" src="images/blackFriends.png"></img>
+        </a>
       </div>
-    </nav>
+      <div class="col-xs-6 text-center">
+        <h3 class="navbar-brand">FriendZone</h3>
+      </div>
+      <div class="col-xs-3 text-right">
+        <a href="date_inbox.html">
+          <img class="iconImage" src="images/blackMatch.png"></img>
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Matching!</h4>
-          </div>
-          <div class="modal-body">
-            <p id="continueMatching"></p>
-            <p><b>Any comments on the match?</b></p>
-            <input type="text" class="form-control" style="height: 100px;">
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-default" href="match.html">Continue Matching</a>
-          </div>
+  <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Matching!</h4>
+        </div>
+        <div class="modal-body">
+          <p id="continueMatching"></p>
+          <p><b>Any comments on the match?</b></p>
+          <input type="text" class="form-control" style="height: 100px;">
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-default" href="match.html">Continue Matching</a>
         </div>
       </div>
     </div>
- <div class="row">
+  </div>
+
+  <div class="row">
       <div class="accordian">
        <ul>
          <li class="larger">
