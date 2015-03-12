@@ -1,0 +1,22 @@
+.profile {
+	width:70px;
+}
+
+.row {
+	padding-top: 20px;
+	padding-bottom:20px;
+	border-bottom: 1px solid gray;
+}
+
+.dateText {
+	font-size: 14pt;
+}
+
+.blueSelected {
+	background-color: #F0F8FF;
+}
+
+.centerText {
+	text-align:center;
+	font-size: 9pt;
+}

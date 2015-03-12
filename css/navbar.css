@@ -3,6 +3,13 @@ a.headers {
   text-align:center;
 }
 
+.navbarHeader {
+  font-size: 6pt;
+  text-align: center;
+  color: black;
+  margin:0px;
+}
+
 .navbar-header {
   width: 40px;
   margin-left:auto;
@@ -40,7 +47,5 @@ a.headers {
 }
 
 .selected {
-  border-style: dashed;
-  border-width: 2px;
   opacity: 0.6;
 }

@@ -1,5 +1,5 @@
 .profile {
-	width:70px;
+	width:80px;
 	padding-top:10px;
 }
 
@@ -13,6 +13,8 @@
 	font-size:9pt;
 }
 
+
+
 .bottomBorder {
 	box-shadow: 0 5px 10px -5px gray;
 }
@@ -21,6 +23,21 @@
 	box-shadow: 0 3px 20px 0px gray
 }
 
+.noStyle {
+	border:none;
+	background:none;
+}
+
 .topBorder{
 	border-top: 1px solid gray ;
+}
+
+.messageStyle {
+	padding-top:8px;
+	margin:5px;
+	padding-left:10px;
+	background-color: #F0F8FF;
+	font-size:9pt;
+	border-radius: 10px;
+	border: 1px solid gray;
 }

@@ -7,13 +7,125 @@ td {
 html, body {
  height: 100%;
  padding:0;
- margin: 0;
+ margin-bottom:20px;
 }
 
 table {
 	height:100%;
 	
 }
+
+.navbar {
+	padding:0px;
+	margin:0px;
+}
+
+.accordian {
+
+	overflow: hidden;
+}
+
+.accordian ul {
+	width:2000px;
+}
+
+
+
+.accordian li {
+	position: relative;
+	display: block;
+	float: left;
+	overflow:hidden;
+	background-color:white;
+		
+	
+/*	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+*/	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+li.larger {
+	width:250px;
+}
+
+ul {
+	padding:0px;
+	margin:0px;
+}
+
+.content {
+	padding-left:20px;
+	padding-right: 20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	visibility:inherit;
+	border-top: 1px solid gray;
+}
+
+
+.accordian ul:hover li {width: 168px;}
+
+.accordian ul:hover li.smaller {width: 70px;}
+
+.accordian ul:hover li div.inner {width: 168px;}
+
+.accordian ul:hover li.smaller div.inner {width: 70px;}
+
+.accordian li.larger:hover {width: 250px;}
+
+.accordian li.larger:hover div.inner {width: 250px;}
+
+.accordian ul li.smaller:hover {width: 150px;}
+
+.accordian ul li.smaller:hover div.right {width: 150px; overflow-y:scroll;}
+
+.accordian ul li.smaller:hover div.inner {width: 150px; visibility:visible;}
+
+.accordian li div {
+	display:block;
+}
+
+.inner {
+	width:250px;
+}
+
+li.smaller div.inner {
+	visibility:hidden;
+}
+
+.left {
+	background-color: white;
+	height: 430px;
+	width: 300px;
+	overflow-y:scroll;
+	overflow-x: hidden;
+}
+
+.right {
+	background-color:#AEEEEE;
+	height:430px;
+	width:50px;
+	width:400px;
+	border-radius:20px;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	
+}
+
+.smallText {
+	font-size: 8pt;
+}
+
+.row {
+	padding:0px;
+	margin:0px;
+}
+
 
 .iconImg {
 	width:50px;
@@ -26,10 +138,11 @@ table {
 	height:100px;
 }
 
+/*
 p {
 	text-align:center;
 }
-
+*/
 .noBorder {
 	border: none;
 	padding-left: 20px;
@@ -55,6 +168,12 @@ p {
 	color: #000000;
 	padding-left: 90px;
 	padding-top: 20px;
+}
+
+.yesNo {
+	border:none;
+	background:none;
+	margin-top:10px;
 }
 
 .newDateMessage {

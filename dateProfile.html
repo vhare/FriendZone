@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  
 	<nav class="navbar">
      <div class="container-fluid">
       <div class="navbar-header pull-left" >
@@ -23,25 +24,25 @@
          <a href="date_inbox.html"><img class="iconImage selected" src="images/blackMatch.png"> </img></a>
        </div>
      </div>
-    </nav>
+    </nav> 
+
+    <script src="js/JSON.js"></script>
 
     <div class="bottomBorder row">      
-    	<div class="col-xs-6 dateName">Bobby</div>
-    	<div class="col-xs-6 dateTime">Coffee at 6PM Friday</div>
+    	<div class="col-xs-6 dateName" id="name"></div>
+    	<div class="col-xs-6 dateTime" id="date" style="font-size:10pt;"></div>
     </div>
 
     <div class="panel-body" style="max-height: 330px; overflow-y: scroll;">
-    <div class="row total">
+    <div class="row">
        <div class="col-xs-6">
-        <p style="text-align:center; padding:10px;"> <b>Mountain View, CA</b> </br> Via Sam and Carly</p>
-      </div>
-      <div class="col-xs-2">
-        <img src="images/niceguy.jpeg" class="profile center-block img-circle"> </img>
-      </div>
-      <div class="col-xs-2">
-         <img src="images/niceGirl.jpeg" class="profile center-block img-circle"> </img>
+        <p style="text-align:center; margin-top:20px; font-weight:bold;" id="location"></p>
+        <p style="text-align:center;" id="profession"></p>
       </div>
 
+      <div class="col-xs-6">
+        <img id="profilePhoto" class="profile center-block img-circle"></img>
+      </div>
     </div>
 
     <div class="row">
@@ -54,26 +55,36 @@
       </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <img id="friendPhoto" class="profile center-block img-circle"></img>
+        <p id="friendName" class="smallText" style="text-align:center;"> </p>
+      </div>
+      <div class="col-xs-8"><div class="messageStyle">This guys looks great! Based on his interests
+      you might consider taking him out to that Artic Monkeys concert for a second date if you guys hit it off.</div></div>
+    </div>
     </div>
 
     <div class="topShadow row">
       <div class="col-xs-4">
-        <button class="btn btn-default" data-toggle="modal" data-target="#yesModal">
+        <button class="noStyle" data-toggle="modal" data-target="#yesModal">
           <img src="images/yes_button.png" class="icon center-block"></img>
           <p class="iconText">Confirm Date</p>
         </button>
       </div>
       <div class="col-xs-4">
-        <button class="btn btn-default" data-toggle="modal" data-target="#noModal">
+        <button class="noStyle" data-toggle="modal" data-target="#noModal">
           <img src="images/no_button.png" class="icon center-block"></img>
           <p class="iconText">Cancel Date</p>
         </button>
       </div>
       <div class="col-xs-4">
-        <img src="images/message.png" class="icon center-block"></img>
+        <a href="message.html"><img src="images/message.png" class="icon center-block"></img></a>
         <p class="iconText">Message</p>
       </div>
     </div>
+
 
     <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
@@ -82,7 +93,7 @@
             <h4 class="modal-title">It's a Date!</h4>
           </div>
           <div class="modal-body">
-            <p>Awesome!  You and Bobby are getting coffee at 6pm on Friday!</p>
+            <p id="dateConfirm"></p>
           </div>
           <div class="modal-footer">
             <a class="btn btn-default" href="date_inbox.html">Ok!</a>
@@ -104,6 +115,21 @@
         </div>
       </div>
     </div>
+
+    <script> 
+      var index = localStorage.currDate;
+      document.getElementById("name").innerHTML = date.dates[index].firstName;
+      document.getElementById("date").innerHTML = date.dates[index].date + " on " + date.dates[index].time;
+      document.getElementById("location").innerHTML = date.dates[index].location;
+      document.getElementById("profession").innerHTML = date.dates[index].profession;
+      document.getElementById("profilePhoto").src = date.dates[index].photo;
+      var index2 = parseInt(date.dates[index].friend);
+      document.getElementById("friendPhoto").src = friend.friends[index2].photo;
+      document.getElementById("friendName").innerHTML = friend.friends[index2].firstName;
+      document.getElementById("dateConfirm").innerHTML = "Awesome! You are attending: " + date.dates[index].date + " with " +  date.dates[index].firstName +" on " + date.dates[index].time;
+
+
+    </script>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>

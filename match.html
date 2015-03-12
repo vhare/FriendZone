@@ -12,7 +12,8 @@
 
   </head>
   <body>
-
+  <script src="js/JSON.js"></script>
+  
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header pull-left" >
@@ -29,49 +30,6 @@
       </div>
     </nav>
 
-    <div="tableContainer">
-   	 <table>
-    	<tr>
-    		<td>
-    			<img src="images/niceGirl.jpeg" class="profile center-block img-circle"></img>
-    			<p> Carly, 22 </p>
-    		</td>
-    		<td>
-    			<img src="images/niceguy.jpeg" class="profile center-block img-circle"></img>
-    			<p> Ashton, 25 </p>
-    		</td>
-    	</tr>
-    		<td>Stanford, CA</td>
-    		<td>Palo Alto, CA</td>
-    	<tr>
-    		<td>Senior at Stanford studying CS</td>
-    		<td>Personal trainer at 24-hour fitness</td>
-    	</tr>
-    		<td>Soccer, Concerts, Knitting, Martial Arts</td>
-    		<td>Raves, Parties, Bars, and Clubs</td>
-    	<tr>
-
-    		<td>5' 6'', Thin </td>
-    		<td>5' 11'', Jacked</td>
-    	</tr>
-    	<tr>
-    		<td class="noBorder">
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#yesModal">
-    		    <img class="iconImg" src="images/yes_button.png"></img>
-    		    YES
-          </button>
-    		</td>
-    		<td class="noBorder">
-          <a class="btn btn-default" href="dummyMatch.html">
-        		<img class="iconImg"  src="images/no_button.png"> </img>
-        		NO
-          </a>
-    		</td>
-    	</tr>
-  	  </table>
-  	 </div>
-
-
     <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -80,15 +38,82 @@
             <h4 class="modal-title">Matching!</h4>
           </div>
           <div class="modal-body">
-            <p>It is almost a match! We are sending this request to Ashton's friend!</p>
+            <p id="continueMatching"></p>
+            <p><b>Any comments on the match?</b></p>
+            <input type="text" class="form-control" style="height: 100px;">
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" href="dummyMatch.html">Continue Matching</a>
+            <a class="btn btn-default" href="match.html">Continue Matching</a>
           </div>
         </div>
       </div>
     </div>
+ <div class="row">
+      <div class="accordian">
+       <ul>
+         <li class="larger">
+            <div class="left">
+              <div class="inner">
+                <div class="content" style="border-top:none;"><img src="images/niceguy.jpeg" class="profile center-block img-circle" id="profilePhoto"></img>
+                <p style="text-align:center;" id="name"></p></div>
+                <div class="content"><p id="profession"></p></div>
+                <div class="content"><p id="likes"> </p></div>
+                <div class="content"><p id="looking"> </p></div>
+                <div class="content"><p id="stature"> </p></div>
+              </div>
+            </div>
+         </li>
+          <li class="smaller"> 
+            
+             <div class="right">
+              <div class="inner"> 
+                <div class="content" style="border-top:none;"><img id="friendPhoto" class="profile center-block img-circle" ></img>
+                <p style="text-align:center;" id="friendName"> Carly, 22 </p></div>
+                <div class="content" id="friendProfession"><p> Studies CS at Stanford </p></div>
+                <div class="content" id="friendLikes"><p>Likes Swimming, golfing, backpacking, and Doctor Who</p></div>
+                <div class="content" id="friendLook"><p>Looking for casual stuff, but no hook-ups</p></div>
+                <div class="content" id="friendStat"><p>5' 6'' and Fit</p></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+     </div>
+    </div>
 
+    <div class="row" style="border-top:1px solid gray;">
+      <div class="col-xs-6" >
+          <button onclick="matchIncrement()" type="button" class="yesNo center-block" style="border:none; background:none;" data-toggle="modal" data-target="#yesModal">
+            <img class="iconImg" src="images/yes_button.png"></img>
+          </button>
+          <p class="text-center smallText">Yes</p>
+      </div>
+      <div class="col-xs-6" >
+          <a onclick="matchIncrement()" class="" href="match.html">
+            <img class="yesNo iconImg center-block"  src="images/no_button.png"> </img>
+          </a>
+          <p class="text-center smallText" >No</p>
+      </div>
+    </div>
+
+    <script>
+      var index = localStorage.currMatch;
+      document.getElementById("profession").innerHTML = match.matches[index].profession;
+      document.getElementById("likes").innerHTML = match.matches[index].likes;
+      document.getElementById("looking").innerHTML = match.matches[index].lookingFor;
+      document.getElementById("stature").innerHTML = match.matches[index].stature;
+      document.getElementById("name").innerHTML = match.matches[index].firstName+" "+match.matches[index].lastName+", "+match.matches[index].age;
+      document.getElementById("profilePhoto").src = match.matches[index].photo;
+      document.getElementById("continueMatching").innerHTML = "It's almost a match! We are sending this request to " + match.matches[index].firstName +"'s friend for confirmation.";
+
+      index = localStorage.currFriend;
+      document.getElementById("friendProfession").innerHTML = friend.friends[index].profession;
+      document.getElementById("friendLikes").innerHTML = friend.friends[index].likes;
+      document.getElementById("friendLook").innerHTML = friend.friends[index].lookingFor;
+      document.getElementById("friendStat").innerHTML = friend.friends[index].stature;
+      document.getElementById("friendName").innerHTML = friend.friends[index].firstName+" "+friend.friends[index].lastName+", "+friend.friends[index].age;
+      document.getElementById("friendPhoto").src = friend.friends[index].photo;
+
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 

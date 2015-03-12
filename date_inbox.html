@@ -9,13 +9,14 @@
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="css/navbar.css" rel="stylesheet">
 
-    <link href="css/match.css" rel="stylesheet">
+    <link href="css/date_inbox.css" rel="stylesheet">
 	
 
   </head>
   <body>
+    <script src="js/JSON.js"></script>
 
-    <nav class="navbar">
+    <nav class="navbar" style="margin-bottom:0px;">
      <div class="container-fluid">
       <div class="navbar-header pull-left" >
           <a class="headers navbar-brand" href="landing.html">FriendZone </a>
@@ -27,122 +28,74 @@
      </div>
     </nav>
 
-    <div class="container">
-      <div class="row ">
-        <div class="col-md-8">
-          <div class="panel panel-info">
-            <div class="panel-body" id="friendzone-panel">
-              <ul class="media-list">
-
-                <li class="media">
-
-                  <div class="media-body custom-cell-wrapper">
-                    <div class="media custom-cell-highlighted">
-
-                      <a class="pull-left" href="dateProfile.html">
-                        <img class="media-object img-circle match-pic" src="images/niceguy.jpeg" />
-                      </a>
-                      <div class="newDateMessage" >
-                        Coffee 6pm Friday 3/6
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                </li>
-                <li class="media">
-
-                  <div class="media-body custom-cell-wrapper">
-                     <a href="dateProfile.html">
-                    <div class="media custom-cell-highlighted">
-                      <a class="pull-left" href="dateProfile.html">
-                        <img class="media-object img-circle match-pic" src="images/niceguy2.jpg" />
-                      </a>
-                      <div class="dateMesssageText" > Hiking at 12pm Sunday 3/1
-                       
-                      </div>
-                    </div>
-                    </a>
-                  </div>
-                </li>
-
-                <li class="media">
-
-                  <div class="media-body custom-cell-wrapper">
-                     <a href="dateProfile.html">
-                    <div class="media custom-cell-with-dot">
-                      <a class="pull-left" href="dateProfile.html">
-                        <img class="media-object unreadMessage" src="images/unreadMessage.png"/>
-                        <img class="media-object img-circle match-pic" src="images/niceguy2.jpg" />
-                      </a>
-                      <div class="newMessageText" > New Message
-                        <br />
-                        <br />    
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                  <hr />
-
-
-              <li class="media">
-
-                <div class="media-body custom-cell-wrapper">
-
-                  <div class="media custom-cell">
-                    <a class="pull-left" href="dateProfile.html">
-                      <img class="media-object img-circle match-pic" src="images/niceguy4.jpg" />
-                    </a>
-                    <div class="dateMesssageText" >
-                      Coffee at 1pm Tuesday 2/29
-                      <br />
-                    </div>
-                  </div>
-
-                </div>
-                <hr />
-
-              </li>
-                              <li class="media">
-                <div class="media-body custom-cell-wrapper">
-
-                  <div class="media custom-cell-with-dot">
-                      <a class="pull-left" href="dateProfile.html">
-                        <img class="media-object unreadMessage" src="images/unreadMessage.png"/>
-                        <img class="media-object img-circle match-pic" src="images/niceguy3.jpg" />
-                      </a>
-                      <div class="newMessageText" >
-                        New message!
-                        <br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-              </li>
-              <li class="media">
-
-                <div class="media-body custom-cell-wrapper">
-                  <div class="media custom-cell">
-                    <a class="pull-left" href="dateProfile.html">
-                      <img class="media-object img-circle match-pic" src="images/niceguy4.jpg" />
-                    </a>
-                    <div class="dateMesssageText" >
-                    Drinks at 1pm Tuesday 2/15
-                      <br />
-                      <hr />
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        </div>
+    <div class="row blueSelected">
+      <a id="0" onclick="inboxClick(this.id)" href="dateProfile.html">
+      <div class="col-xs-5">
+        <img id="photo0" class="profile center-block img-circle"></img>
+        <p id="dateName0" class="centerText"></p>
       </div>
+      <div class="col-xs-7"><b><p class="dateText" id="text0"></p></b></div>
+      </a>
     </div>
+    
+  
+    <div class="row blueSelected">
+       <a id="1" onclick="inboxClick(this.id)" href="dateProfile.html">
+      <div class="col-xs-5"><img id="photo1" class="profile center-block img-circle"></img>
+        <p id="dateName1" class="centerText"></p>
+      </div>
+      <div class="col-xs-7"><b><p id="text1" class="dateText" ></p></b></div>
+      </a>
+    </div>
+    
+
+    <div class="row">
+      <a id="2" onclick="inboxClick(this.id)" href="dateProfile.html">
+        <div class="col-xs-5">
+        <img id="photo2" class="profile center-block img-circle"></img>
+        <p id="dateName2" class="centerText"></p>
+        </div>
+        <div class="col-xs-7"><p id="text2" class="dateText" ></p></div>
+      </a>
+    </div>
+    <div class="row">
+      <a id="3" onclick="inboxClick(this.id)" href="dateProfile.html">
+        <div class="col-xs-5"><img id="photo3" class="profile center-block img-circle"></img>
+          <p id="dateName3" class="centerText"></p>
+        </div>
+        <div class="col-xs-7"><p id="text3" class="dateText" ></p></div>
+      </a>
+    </div>
+    <div class="row">
+      <a id="4" onclick="inboxClick(this.id)" href="dateProfile.html">
+        <div class="col-xs-5">
+         <img id="photo4" class="profile center-block img-circle"></img>
+         <p id="dateName4" class="centerText"></p>
+        </div>
+        <div class="col-xs-7"><p id="text4" class="dateText" ></p></div>
+      </a>
+    </div>
+    <div class="row">
+      <a id="5" onclick="inboxClick(this.id)" href="dateProfile.html">
+        <div class="col-xs-5">
+          <img id="photo5" class="profile center-block img-circle"></img>
+          <p id="dateName5" class="centerText"></p>
+        </div>
+        <div class="col-xs-7"><p id="text5" class="dateText" ></p></div>
+      </a>
+    </div>
+
+    <script>
+      for(i = 0; i < 6; i++) {
+        var text = i.toString();
+        var photoId = "photo"+text;
+        var textId = "text"+text;
+        var nameId = "dateName"+text;
+        document.getElementById(photoId).src = date.dates[i].photo;
+        document.getElementById(textId).innerHTML = date.dates[i].date + " on " + date.dates[i].time;
+        document.getElementById(nameId).innerHTML = date.dates[i].firstName + " " + date.dates[i].lastName;
+      }
+    </script>
 
   	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
