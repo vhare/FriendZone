@@ -13,14 +13,18 @@
 	font-size:9pt;
 }
 
-
+.panel-body {
+	height: 460px;
+}
 
 .bottomBorder {
 	box-shadow: 0 5px 10px -5px gray;
 }
 
 .topShadow {
-	box-shadow: 0 3px 20px 0px gray
+	box-shadow: 0 3px 20px 0px gray;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 
 .noStyle {
