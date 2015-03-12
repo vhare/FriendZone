@@ -32,9 +32,11 @@
     </div>
   </div>
 
+  <script src="js/JSON.js"></script>
+
   <div class="bottomBorder row">      
-  	<div class="col-xs-6 dateName">Bobby</div>
-  	<div class="col-xs-6 dateTime">Coffee at 6PM Friday</div>
+  	<div class="col-xs-6 dateName" id="dateName"></div>
+  	<div class="col-xs-6 dateTime" id="dateTime"></div>
   </div>
 
   
@@ -42,47 +44,54 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class-"panel-title">Chat with Bobby</h3>
-          </div>
           <div class="panel-body">
-            <ul class="media-list">
-              <li class="media">
-                <div class="media-left">
-                  <img class="media-object img-circle profile-pic" src="images/Zac-Efron.jpg"></img>
+            <ul class="media-list" id="conversation">
+              <li class="media" >
+                <div class="media-left" >
+                  <img class="media-object img-circle profile-pic" id="yourDate"></img>
                 </div>
                 <div class="media-body">
-                  <p>Hey Joanie! Looking forward to getting coffee with you! Do you have a particular place in mind?</p>
+                  <p class="dateCont">Hey! Looking forward to our date! Do you have a particular place in mind?</p>
                 </div>
               </li>
-              <li class="media">
+              <div class="row"></div>
+              <li class="media pull-right">
                 <div class="media-body">
-                  <p>Hey there! I really like Philz coffee, want to meet at the one in Palo Alto?</p>
+                  <p class="youCont">Hmmm, let me think about it...</p>
                 </div>
-                <div class="media-right">
-                  <img class="media-object img-circle profile-pic" src="images/niceGirl.jpeg"></img>
-                </div>
+              <div class="media-right">
+                  <img src="images/nicegirl3.jpg" class="media-object img-circle profile-pic" id="you"></img>
+              </div>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </div>
+  </div>
+
 
     <div class="row">
       <div class="col-xs-12">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Send a message!">
+          <input type="text" class="form-control" placeholder="Send a message!" id="textInput">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button" id="send-chat">Send</button>
+            <button class="btn btn-default" onclick="addElement()" type="button" id="send-chat">Send</button>
           </span>
         </div>
       </div>
     </div>
   </div>
 
+  <script>
+      var index = localStorage.currDate;
+      document.getElementById("dateName").innerHTML = date.dates[index].firstName;
+      document.getElementById("dateTime").innerHTML = date.dates[index].date + " on " + date.dates[index].time;
+      document.getElementById("yourDate").src = date.dates[index].photo;
+  </script>
+
   <script src="js/jquery.js"></script>
   <script src="js/message.js"></script>
+  <script src="js/addMessage.js"></script>
 
   </body>
 
